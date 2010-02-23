@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/sinatra/settings.rb",
+     "sinatra-settings.gemspec",
      "spec/sinatra/settings_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"

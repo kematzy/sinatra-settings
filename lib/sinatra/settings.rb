@@ -21,6 +21,116 @@ module Sinatra
   
   # :startdoc:
   
+  # = Sinatra::Settings
+  # 
+  # A Sinatra Extension that shows your app's settings and other debug information.
+  # 
+  # Ever wanted an overview of all Sinatra settings (formerly options) in your app? 
+  # 
+  # Well, now you can through this Sinatra Extension which makes that task dead simple, 
+  # while also adding in some other useful debug information in the output.
+  # 
+  # With the inspiration taken from Sinatra's Show Exception output page, ....
+  # 
+  # 
+  # == Installation
+  # 
+  #   #  Add Gemcutter to your RubyGems sources 
+  #   $  gem sources -a http://gemcutter.com
+  # 
+  #   $  (sudo)? gem install sinatra-settings
+  # 
+  # == Dependencies
+  # 
+  # This Gem depends upon the following:
+  # 
+  # === Runtime:
+  # 
+  # * sinatra ( >= 1.0.a )
+  # 
+  # 
+  # === Development & Tests:
+  # 
+  # * rspec (>= 1.3.0 )
+  # * rack-test (>= 0.5.3)
+  # * rspec_hpricot_matchers (>= 0.1.0)
+  # * sinatra-tests (>= 0.1.6)
+  # 
+  # 
+  # == Getting Started
+  # 
+  # To view the settings in your app, just require and register the extension 
+  # in your sub-classed Sinatra app:
+  # 
+  #   require 'sinatra/settings'
+  # 
+  #   class YourApp < Sinatra::Base
+  # 
+  #     register(Sinatra::Settings)
+  # 
+  #     enable :show_settings   # turn it on 
+  # 
+  #     <snip...>
+  #   end
+  # 
+  # 
+  # Then at the bottom of your App's layout - <tt>layout.(erb|haml)</tt> add the following:
+  # 
+  # 
+  #       <snip...>
+  # 
+  #       <%= show_settings_output? %>
+  # 
+  #     </body>
+  #   </html>
+  # 
+  # 
+  # Reload your app and view the added content at the bottom of your page.
+  # 
+  # You can see an example of the output here http://kematzy.com/tmp/sinatra-settings/sinatra-settings-extension-output-50.jpg 
+  # 
+  # 
+  # That's really all there is.
+  # 
+  # 
+  # == Configuration Options
+  # 
+  # By default, these are the settings:
+  # 
+  # 
+  #   # don't show settings by default
+  #   set :show_settings, false
+  # 
+  #   # only show the settings in development mode.
+  #   set :show_settings_environment, :development
+  # 
+  # 
+  # Apart from turning it On / Off, you can also set the output to show up 
+  # in <tt>:production</tt> or <tt>:test</tt> enviroments.
+  # 
+  # The advantage of having two configuration 'switches' is that you can leave 
+  # all the code as is, and in +:development+  it will show the output, but in
+  # <tt>:production</tt> no output will be shown 
+  # (other than a tiny HTML comment telling you it's Off)
+  # 
+  # 
+  # That's it. I hope that's easy enough.
+  # 
+  # 
+  # == TODOs
+  # 
+  # * Decide whether this functionality should really be incorporated into a 
+  #   Sinatra::Debug extension instead.
+  # 
+  # * Any other improvements you or I can think of.
+  # 
+  # == Copyright
+  # 
+  # Copyright (c) 2010 kematzy. Released under the MIT License.
+  # 
+  # See LICENSE for details.
+  # 
+  
   module Settings
     
     VERSION = '0.1.0' unless const_defined?(:VERSION)
