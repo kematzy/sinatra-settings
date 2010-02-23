@@ -30,7 +30,7 @@ module Sinatra
   # Well, now you can through this Sinatra Extension which makes that task dead simple, 
   # while also adding in some other useful debug information in the output.
   # 
-  # With the inspiration taken from Sinatra's Show Exception output page, ....
+  # With a heavy dose of inspiration taken from Sinatra's Show Exception output page.
   # 
   # 
   # == Installation
@@ -87,7 +87,9 @@ module Sinatra
   # 
   # Reload your app and view the added content at the bottom of your page.
   # 
-  # You can see an example of the output here http://kematzy.com/tmp/sinatra-settings/sinatra-settings-extension-output-50.jpg 
+  # You can see an example of the output here:
+  # 
+  # http://kematzy.com/tmp/sinatra-settings/sinatra-settings-extension-output-50.jpg 
   # 
   # 
   # That's really all there is.
