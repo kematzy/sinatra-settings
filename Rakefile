@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "sinatra-settings"
-    gem.summary = %Q{=}
-    gem.description = %Q{=}
+    gem.summary = %Q{A Sinatra Extension that shows your app's settings and other debug information}
+    gem.description = %Q{Want an overview of all Sinatra settings (formerly options) in your app? This Sinatra Extension makes that dead simple.}
     gem.email = "kematzy@gmail.com"
     gem.homepage = "http://github.com/kematzy/sinatra-settings"
     gem.authors = ["kematzy"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency "sinatra", ">= 0.10.1"
+    gem.add_development_dependency "sinatra-tests", ">= 0.1.6"
+    gem.add_development_dependency "rspec", ">= 1.3.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
