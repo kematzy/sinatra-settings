@@ -1,0 +1,10 @@
+
+rel 0.1.1 (2010-03-01)
+
+* Bug fix: #1 added nl2br method
+* Added Extensions output, listing loaded extensions and version if available.
+
+
+rel 0.1.0 (2010-02-23)
+
+* intial release of gem / code
