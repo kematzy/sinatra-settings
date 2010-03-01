@@ -230,7 +230,7 @@ TEMPLATE = <<HTML
    /* table.req tr td.code { white-space: pre-wrap; word-wrap: break-word; } */
    table.req tr td.key { width: 200px; overflow:hidden; } 
    table.req tr td.code div { width: 650px; overflow:hidden; } 
-
+   .quiet { color: #aaa; }
 </style>
 
 <div id="debug">
@@ -380,6 +380,29 @@ TEMPLATE = <<HTML
     </table>
     <div class="clear"></div>
   </div> <!-- /SETTINGS -->
+
+  <hr>
+
+  <div id="extensions">
+    <h3>EXTENSIONS (loaded)</h3>
+    <table class="req">
+      <tr>
+        <th>Name</th>
+        <th>Version</th>
+      </tr>
+       <% self.class.extensions.each do |ext| %>
+       <tr>
+         <td class="key"><%=h ext %></td>
+         <% if ext.const_defined?(:VERSION) %>
+           <td class="code"><div><%= ext.const_get(:VERSION) %></div></td>
+          <% else %>
+          <td class="code"><div>Unknown <span class="quiet">(no constant :VERSION defined in extension)</span></div></td>
+          <% end %>
+       </tr>
+       <% end %>
+    </table>
+    <div class="clear"></div>
+  </div> <!-- /EXTENSIONS -->
 
   <hr>
 
