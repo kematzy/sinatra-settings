@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sinatra-settings}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["kematzy"]
-  s.date = %q{2010-02-23}
+  s.date = %q{2010-03-01}
   s.description = %q{Want an overview of all Sinatra settings (formerly options) in your app? This Sinatra Extension makes that dead simple.}
   s.email = %q{kematzy@gmail.com}
   s.extra_rdoc_files = [
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     "CHANGES",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
