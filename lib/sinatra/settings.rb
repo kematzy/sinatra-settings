@@ -147,6 +147,18 @@ module Sinatra
         alias_method :h, :escape_html
       end
       
+      unless respond_to?(:nl2br)
+        ##
+        # Convert new lines (\n) into +<br>+ tags in the given text
+        #
+        # ==== Examples
+        # 
+        # @api public
+        def nl2br(txt) 
+          txt.gsub("\n", '<br>')
+        end
+      end
+      
       
       ##
       # Convenience helper method that returns a Hash, nicely
