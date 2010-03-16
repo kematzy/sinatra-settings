@@ -179,7 +179,7 @@ describe "Sinatra" do
             erb_app "<%= show_settings_output? %>"
             # body.should have_tag(:debug)
             body.should have_tag('div#debug') do |div| 
-              div.should have_tag('h2', 'PAGE DEBUG')
+              div.should have_tag('h2', 'APP INFORMATION')
               div.should have_tag('div#get > table.req')
               
               div.should have_tag('div#params > table.req')

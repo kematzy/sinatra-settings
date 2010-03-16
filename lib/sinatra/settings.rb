@@ -235,7 +235,7 @@ TEMPLATE = <<HTML
 
 <div id="debug">
 
-  <h2>PAGE DEBUG</h2>
+  <h2>APP INFORMATION</h2>
 
   <div id="get">
    <h3>GET</h3>
@@ -384,7 +384,7 @@ TEMPLATE = <<HTML
   <hr>
 
   <div id="extensions">
-    <h3>EXTENSIONS (loaded)</h3>
+    <h3>EXTENSIONS (registered)</h3>
     <table class="req">
       <tr>
         <th>Name</th>
