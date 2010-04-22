@@ -341,7 +341,7 @@ TEMPLATE = <<HTML
         <% r.each { |route| %>
           <tr>
             <td class="key"><%=h route.split(' ').first %></td>
-            <td class="code"><div><%= request.script_name %><%=h route.split(' ')[1] %></div></td>
+            <td class="code"><div><%= request.script_name %><a href="<%=h route.split(' ')[1].sub(/\\?$/,'') %>"><%=h route.split(' ')[1] %></a></div></td>
           </tr>
         <% } %>
       </table>
