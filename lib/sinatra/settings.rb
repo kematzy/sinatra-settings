@@ -1,7 +1,4 @@
 
-require 'sinatra/base'
-
-
 module Sinatra
   
   # :stopdoc:
@@ -72,6 +69,15 @@ module Sinatra
   # 
   #     <snip...>
   #   end
+  # 
+  # In your "classic" Sinatra app, you just require the extension like this:
+  # 
+  #   require 'rubygems'
+  #   require 'sinatra'
+  #   require 'sinatra/settings'
+  # 
+  #   <snip...>
+  # 
   # 
   # 
   # Then at the bottom of your App's layout - <tt>layout.(erb|haml)</tt> add the following:
@@ -459,5 +465,6 @@ HTML
     
   end #/module Settings
   
+  register(Sinatra::Settings)
+  
 end #/module Sinatra
-

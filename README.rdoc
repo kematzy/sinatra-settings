@@ -51,6 +51,16 @@ in your sub-classed Sinatra app:
   end
 
 
+In your "classic" Sinatra app, you just require the extension like this:
+
+  require 'rubygems'
+  require 'sinatra'
+  require 'sinatra/settings'
+  
+  <snip...>
+  
+
+
 Then at the bottom of your App's layout - <tt>layout.(erb|haml)</tt> add the following:
 
 
