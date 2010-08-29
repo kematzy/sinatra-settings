@@ -1,4 +1,9 @@
 
+rel 0.1.2 (2010-08-29)
+
+* Issue: #1 added 'classic' Sinatra app support
+* Some minor changes in the settings output.
+
 rel 0.1.1 (2010-03-01)
 
 * Bug fix: #1 added nl2br method
