@@ -12,9 +12,6 @@ With a heavy dose of inspiration taken from Sinatra's Show Exception output page
 
 == Installation
 
-  #  Add Gemcutter to your RubyGems sources 
-  $  gem sources -a http://gemcutter.com
-
   $  (sudo)? gem install sinatra-settings
 
 == Dependencies
@@ -23,7 +20,7 @@ This Gem depends upon the following:
 
 === Runtime:
 
-* sinatra ( >= 1.0.a )
+* sinatra ( >= 1.0 )
 
 
 === Development & Tests:

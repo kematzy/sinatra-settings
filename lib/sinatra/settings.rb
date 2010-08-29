@@ -43,7 +43,7 @@ module Sinatra
   # 
   # === Runtime:
   # 
-  # * sinatra ( >= 1.0.a )
+  # * sinatra ( >= 1.0 )
   # 
   # 
   # === Development & Tests:
